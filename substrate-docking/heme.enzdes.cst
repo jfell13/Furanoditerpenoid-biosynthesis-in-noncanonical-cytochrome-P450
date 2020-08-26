@@ -1,0 +1,60 @@
+# cst constraint descriptor phytase protein
+
+# NOTE
+
+#/Users/siegel03/rosetta/main/database/chemical/residue_type_sets/fa_standard/residue_types/l-caa for atoms order in residues
+
+#Cysteine 437 Bonding to Fe in Heme
+
+CST::BEGIN
+  TEMPLATE::   ATOM_MAP: 1 atom_name: FE1 N1 C19
+  TEMPLATE::   ATOM_MAP: 1 residue3: LG1
+
+  TEMPLATE::   ATOM_MAP: 2 atom_name: SG CB CA
+  TEMPLATE::   ATOM_MAP: 2 residue1: C
+
+  CONSTRAINT:: distanceAB:   1.8    0.5   500  1     
+#  CONSTRAINT::    angle_A:   120.0  20.0  100  360. 
+#  CONSTRAINT::    angle_B:   120.0  20.0  100  360. 
+# CONSTRAINT::  torsion_A:    68.0  10.0  100  360. 
+# CONSTRAINT:: torsion_AB:  -128.5  10.0  100  360. 
+# CONSTRAINT::  torsion_B:  -177.1  10.0  100  360. 
+
+CST::END  
+
+#Arginine 435 hydrogen bonding to caboxy group of chain
+
+CST::BEGIN
+  TEMPLATE::   ATOM_MAP: 1 atom_name: O4 C10 C8
+  TEMPLATE::   ATOM_MAP: 1 residue3: LG1
+
+  TEMPLATE::   ATOM_MAP: 2 atom_name: NE CD CG
+  TEMPLATE::   ATOM_MAP: 2 residue1: R
+
+  CONSTRAINT:: distanceAB:   1.75   0.5   500  1
+#  CONSTRAINT::    angle_A:   120.0  20.0  100  360.
+#  CONSTRAINT::    angle_B:   120.0  20.0  100  360.
+# CONSTRAINT::  torsion_A:    68.0  10.0  100  360.
+# CONSTRAINT:: torsion_AB:  -128.5  10.0  100  360.
+# CONSTRAINT::  torsion_B:  -177.1  10.0  100  360.
+
+CST::END
+
+#Alanine 432 amide backbone hydrogen bonding to carboxy group of second chain
+
+CST::BEGIN
+  TEMPLATE::   ATOM_MAP: 1 atom_name: O1 C9 C5
+  TEMPLATE::   ATOM_MAP: 1 residue3: LG1
+
+  TEMPLATE::   ATOM_MAP: 2 atom_name: O C CA
+  TEMPLATE::   ATOM_MAP: 2 residue1: A
+
+  CONSTRAINT:: distanceAB:     2.0  0.5   500  1
+#  CONSTRAINT::    angle_A:   120.0  20.0  100  360.
+#  CONSTRAINT::    angle_B:   120.0  20.0  100  360.
+# CONSTRAINT::  torsion_A:    68.0  10.0  100  360.
+# CONSTRAINT:: torsion_AB:  -128.5  10.0  100  360.
+# CONSTRAINT::  torsion_B:  -177.1  10.0  100  360.
+
+CST::END
+
